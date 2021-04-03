@@ -14,7 +14,7 @@ body {
 
 
 .board-colors {
-    position: relative;
+    position: absolute;
     display: none;
     flex-direction: row;
     justify-content: center;
@@ -28,8 +28,8 @@ body {
 }
 
 .list-colors {
-    height: 400px;
-    width: 700px;
+    height: 50%;
+    width: 120%;
     background-color: #333a45;
     border-radius: 0.25rem;
     overflow-y: scroll;

@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Cascadia;
+    src: url(../Font/CascadiaCode.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cascadia;
 }
 
 body {
