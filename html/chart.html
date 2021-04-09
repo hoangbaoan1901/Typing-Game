@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/chart.css">
+    <style></style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart" ></canvas>
+    </div>
+    <div class="personal_best">
+        <div class="score">
+            <table class="score_time">
+                <tr style="color: #526777;">
+                    <th>Time</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                    <th>Consistency</th>
+                </tr>
+                <tr class="interleaved">
+                    <td >15</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                </tr>
+                <tr class="interleaved">
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>120</td>
+                </tr>
+            </table>
+        </div>
+        <div class="score">
+            <table class="score_word">
+                <tr style="color: #526777;">
+                    <th>Word</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                    <th>Consistency</th>
+                </tr>
+                <tr class="interleaved">
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                </tr>
+                <tr class="interleaved">
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="group_stats">
+        <div class="highest_wpm">
+            <div class="tiltle">highest wpm</div>
+            <div class="value"></div>
+        </div>
+        <div class="average_wpm">
+            <div class="tiltle"> average wpm</div>
+            <div class="value"></div>
+        </div>
+        <div class="average_wpm_10">
+            <div class="tiltle">average wpm <br>(last 10 tests)</div>
+            <div class="value">123</div>
+        </div>
+        <div class="time_typing">
+            <div class="tiltle">time typing</div>
+            <div class="value"></div>
+        </div>
+        
+        <div class="avg_accuracy">
+            <div class="tiltle">avg accuracy</div>
+            <div class="value"></div>
+        </div>
+        <div class="avg_accuracy_10">
+            <div class="tiltle">avg accuracy<br>(last 10 tests)</div>
+            <div class="value"></div>
+        </div>
+        <div class="none"></div>
+        <div class="test_started">
+            <div class="tiltle">test started</div>
+            <div class="value"></div>
+        </div>
+
+        <div class="test_completed">
+            <div class="tiltle">test completed</div>
+            <div class="value"></div>
+        </div>
+        
+        
+    </div>
+</body>
+<script src="../js/TypingEngine.js"></script>
+<script src="../js/chart.js"></script>
+</html>

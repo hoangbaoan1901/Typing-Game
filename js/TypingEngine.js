@@ -3,9 +3,11 @@ const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random'
 const wordDisplayElement = document.getElementById("words-display")
 const wordInputElement = document.getElementById("words-input")
 const timerElement = document.getElementById("timer")
-let typed = 0;
-let second = 0;
-let cron;
+let typed = 0
+let second = 0
+let cron
+let wpm = []
+
 
 
 wordInputElement.addEventListener('input', () => {
@@ -14,8 +16,11 @@ wordInputElement.addEventListener('input', () => {
         start()
         console.log(document.getElementById("words-display").innerText)
         console.log(document.getElementById("words-display").innerText.length)
+        let wrong = typed - document.getElementById("words-display").innerText.length
+        let text = document.getElementById("words-display").innerText.length
+        let accuracy =  Math.round((- wrong / (text))*100)
+        console.log(accuracy)
     }
-
 
     const arrayWord = wordDisplayElement.querySelectorAll('span')
     const arrayValue = wordInputElement.value.split('')
@@ -41,12 +46,21 @@ wordInputElement.addEventListener('input', () => {
         wordInputElement.innerHTML = null
     })
 
+    //When everything is typed correctly
     if (correct) {
         pause()
 
-        // renderNewQuote()
-        let result = document.getElementById("words-display").innerText.length / parseInt(document.getElementById("timer").innerText) * 12
-        console.log(result)
+        
+        let result = Math.round(document.getElementById("words-display").innerText.length / parseInt(document.getElementById("timer").innerText) * 12)
+        // console.log(result)
+        // localStorage.setItem('wpm',result)
+        wpm.push(result)
+        localStorage.setItem("results", JSON.stringify(wpm))
+        let retrieve = JSON.parse(localStorage.getItem("results"))
+        console.log(retrieve)
+        renderNewQuote()
+        reset()
+
     }
 })
 
@@ -93,3 +107,10 @@ function timer() {
 
 //Rendering new quote
 renderNewQuote()
+
+//Storing result in local storage
+// let a = localStorage.getItem('wpm')
+
+// wpm.push(a)
+// localStorage.setItem('wpm_array', JSON.stringify(wpm));
+
