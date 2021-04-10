@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 
-body {
-    /* display: flex;
+/* .main-body {
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin:0;
-    background-color: rgb(38,42,51); */
-}
+    background-color: rgb(38,42,51);
+} */
 
 body, .words-input {
     font-family: 'Cascadia Code';
@@ -19,28 +19,32 @@ body, .words-input {
 .container{
     position: absolute;
     background-color: var(--background-color);
-    margin-top: 20px;
     padding: 1rem;
     border-radius: 0.5rem;
-    width: 700px;
+    width: 80%;
     max-width: 90%;
     transition: 0.5s;
     animation: fadeIn 0.5s;
 }
 
 .timer {
-    position: absolute;
-    top: 2rem;
+    position: relative;
+    /* margin-top: 2%; */
+    /* top: 2rem; */
+    /* text-align: center; */
+    
     font-size: 3rem;
     color: var(--main-color);
     font-weight: bold;
 }
 
 .words-display{
+    /* z-index: 3; */
     margin: 1rem;
     margin-left:calc(-1rem + 2px);
     margin-right:calc(-1rem + 2px);
     color: rgb(204,241,239); 
+    font-size: 20px;
 }
 
 .words-input{
