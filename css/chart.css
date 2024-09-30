@@ -1,0 +1,66 @@
+body{
+    background-color: #262A33;
+}
+* {
+    box-sizing: border-box;
+}
+#myChart{
+    position: relative;
+    height: 80%;
+    width: 80%;
+    margin-top: 10%;
+}
+
+
+.personal_best{
+    width: 950px;
+    height: 200px;
+    margin: auto;
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.interleaved{
+    background-color: #22262E;
+}
+th{
+    height: 40px;
+    font-family: 'Roboto Mono', monospace;
+    padding-right: 60px;
+}
+td{
+    color: #E2F4ED;
+    height: 40px;
+    vertical-align: inherit;
+    font-family: 'Roboto Mono', monospace;
+}
+.row{
+    margin-left:-5px;
+    margin-right:-5px;
+}
+.score {
+    float: left;
+    width: 50%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+.group_stats{
+    height: 800px;
+    width: 80% ;
+    margin-left: 284px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.tiltle{
+    color: #526777;
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+}
+.value{
+    color: #43FFAF;
+    font-size: 80px;
+    font-family: 'Roboto Mono', monospace;
+}
